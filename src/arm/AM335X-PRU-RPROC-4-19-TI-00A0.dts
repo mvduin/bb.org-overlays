@@ -47,6 +47,27 @@
 					ranges;
 					status = "okay";
 
+					shmem@4a300000 {
+						reg = <0x4a300000 0x2000>;
+						reg-names = "dram0";  // probably superfluous
+						compatible = "uio";
+						symlink = "uio/pru-dram0";
+					};
+
+					shmem@4a302000 {
+						reg = <0x4a302000 0x2000>;
+						reg-names = "dram1";  // probably superfluous
+						compatible = "uio";
+						symlink = "uio/pru-dram1";
+					};
+
+					shmem@4a310000 {
+						reg = <0x4a310000 0x3000>;
+						reg-names = "dram2";  // probably superfluous
+						compatible = "uio";
+						symlink = "uio/pru-dram2";
+					};
+
 					pruss: pruss@4a300000 {
 						compatible = "ti,am3356-pruss";
 						reg = <0x4a300000 0x80000>;
